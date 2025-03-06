@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MuziMuzi 사용 설정</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .save-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .save-btn:hover {
+            background-color: #3367d6;
+        }
+        #status {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .success {
+            color: #4CAF50;
+        }
+        .error {
+            color: #f44336;
+        }
+        .help-text {
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MuziMuzi 설정</h1>
+        
+        <div class="form-group">
+            <label for="apiKey">Microsoft Translator API 키</label>
+            <input type="text" id="apiKey" placeholder="API 키를 입력하세요">
+            <div class="help-text">
+                Azure Portal에서 발급받은 Translator API 키를 입력해주세요.
+                <a href="https://portal.azure.com/" target="_blank">Azure Portal 바로가기</a>
+            </div>
+        </div>
+        
+        <button id="saveBtn" class="save-btn">저장</button>
+        
+        <div id="status"></div>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>
